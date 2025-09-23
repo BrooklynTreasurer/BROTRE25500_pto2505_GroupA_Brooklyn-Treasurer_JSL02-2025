@@ -1,0 +1,275 @@
+:root{
+    --primary-purple: #635FC7;
+    --primary-purple-light: #A8A4FF;
+    --black: #000112;
+    --dark-grey: #3E3F4E;
+    --medium-grey: #828FA3;
+    --lines-light: #E4EBFA;
+    --light-grey: #F4F7FD;
+    --white: #FFFFFF;
+    --red: #EA5555;
+    --red-light: #FF9898;
+
+    --dot-todo: #49C4E5;
+    --dot-doing: #8471F2;
+    --dot-done: #67E2AE;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    background-color: var(--light-grey);
+    color: var(--black);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow: hidden;
+}
+
+.kanban-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* side bar styling */
+.sidebar{
+    width: 250px;
+    background-color: var(--white);
+    padding: 20px 0;
+    border-right: 1px solid var(--lines-light);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.boards h4{
+    font-size: 11px;
+    color: var(--medium-grey);
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    margin:0 20px 15px;
+    margin-bottom: 22px;
+}
+
+.logo{
+    padding:0 20px;
+    margin-bottom: 30px;
+}
+
+.kanban-logo{
+    height: 28px;
+    width: auto;
+    padding-top: 20px;
+}
+
+.boards-section h4{
+    font-size: 12px;
+    color: var(--medium-grey);
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    margin:0 20px 15px;
+}
+
+.board-button{
+    background-color: var(--primary-purple);
+    border: none;
+    text-align: left;
+    width: 90%;
+    padding: 12px 20px;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.board-button:hover:not(.active){
+    background-color: var(--primary-purple);
+    cursor: pointer;
+}
+
+.board-button.active{
+    background-color: var(--primary-purple);
+    color: var(--white);
+}
+
+/* Main content area */
+.main-content{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-grey);
+}
+
+.main-header{
+    background-color: var(--white);
+    padding: 20px 30px;
+    border-bottom: 1px solid var(--lines-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 60px;
+}
+
+.main-header h2{
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--black);
+}
+
+.columns-container{
+    flex-grow: 1;
+    padding: 24px;
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+}
+
+.column{
+    flex-shrink: 0;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.column-header{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.column-dot{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.todo-dot{
+    background-color: var(--dot-todo);
+}
+.doing-dot{
+    background-color: var(--dot-doing);
+}
+.done-dot{
+    background-color: var(--dot-done);
+}
+
+.column-header h4{
+    font-size: 12px;
+    color: var(--medium-grey);
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.tasks-list{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.task-card{
+    background-color: var(--white);
+    padding: 23px 16px;
+    border-radius: 8px;
+    box-shadow:0px 4px 6px rgba(0,0,0,0.1);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--black);
+    cursor: grab;
+    transition: transform 0.1s ease-in-out;
+}
+
+.task-card:hover{
+    transform: translateY(-2px);
+}
+
+/* scrollbar styles */
+.columns-container::-webkit-scrollbar {
+     height: 8px; 
+    }
+
+.columns-container::-webkit-scrollbar-track {
+    background: var(--light-grey);
+    border-radius: 10px; 
+    }
+    
+.columns-container::-webkit-scrollbar-thumb {
+    background: var(--medium-grey); 
+    border-radius: 10px; 
+    }
+
+.columns-container::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-grey); 
+    }
+
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-header {
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .main-header h2 {
+        font-size: 0;
+        position: relative;
+    }
+
+    .main-header h2::before {
+        content: "";
+        display: inline-block;
+        background-image: url('assets/logo-light.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 120px; 
+        height: 40px;  
+        vertical-align: middle;
+    }
+
+    .main-header h2::after {
+        content: "▾";
+        font-size: 16px;
+        color: var(--medium-grey);
+        margin-left: 6px;
+    }
+
+    .columns-container {
+        flex-direction: column;
+        padding: 16px;
+        gap: 16px;
+        overflow-x: hidden;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .task-card {
+        font-size: 14px;
+        padding: 18px 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-header h2 {
+        font-size: 0px;
+    }
+
+    .task-card {
+        width: 90%;
+    }
+
+    .column-header h4 {
+        font-size: 10px;
+    }
+}
