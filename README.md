@@ -1,45 +1,62 @@
-# 📋 Kanban Board Project
-# Kanban Board by Brooklyn Treasurer
-A clean and responsive **Kanban board** built with **HTML** and **CSS** to help visualize tasks in different workflow stages (To Do, Doing, Done).  
-This project is designed to look like a professional Kanban tool and is **fully responsive for mobile devices**.
+# ✅ Task Input & Status Validation System (JSL02)
+
+## 👨‍💻 Author  
+**Developed by Brooklyn Treasurer**
 
 ---
 
-## 🚀 Features
+## 📝 Project Description  
+The **Task Input & Status Validation System (JSL02)** is a JavaScript-driven program designed to ensure accurate and consistent task entry.  
+It builds on the corrected **Kanban Board (JSL01)** project, extending its functionality with **interactive prompts, validation, and feedback** in the console.  
 
-- 🖥️ **Modern Desktop Layout** – Clean sidebar navigation and board columns  
-- 📱 **Responsive Mobile Design** – Optimized for small screens using `@media` queries  
-- 🎨 **Custom Styling** – Soft shadows, rounded cards, and a light color scheme  
-- 🏷️ **Task Columns** – Separate sections for To Do, Doing, and Done  
-- 🧩 **Reusable Components** – Easy-to-edit task cards and columns  
-- 🖼️ **Custom Logo Integration** – Branded Kanban logo in the header
+This project emphasizes **data validation, user interaction, and clean maintainable code**, ensuring that all entered tasks follow consistent formatting rules.  
 
 ---
 
-## 🖼️ Preview
+## 🎯 Key Objectives  
 
-| Desktop View                         | Mobile View                          |
-|-------------------------------------|-------------------------------------|
-| ![Desktop Preview](./explainer-images/JSL01-Desktop.png) | ![Mobile Preview](./explainer-images/JSL01-Mobile.png) |
-
----
-
-## 🛠️ Tech Stack
-
-- **HTML5** – Semantic markup for structure  
-- **CSS3** – Custom styles and responsiveness  
-- **Flexbox** – For layout alignment and spacing  
-- **Media Queries** – To make it mobile-friendly
+- ✅ Correctly link the JavaScript file to the HTML document  
+- ✅ Prompt the user to enter **title, description, and status** for two separate tasks  
+- ✅ Automatically **convert status input to lowercase** for consistency  
+- ✅ Validate status input (`todo`, `doing`, `done`) and re-prompt until valid  
+- ✅ Display completed tasks (`done`) in the console in a structured format  
+- ✅ Show motivational message `"No tasks completed, let's get to work!"` if no tasks are done  
+- ✅ Use **descriptive variable names** and **clear comments** for maintainability  
 
 ---
 
+## 🚀 Features  
 
-## ⚙️ Install & Run Instructions
+- 🖥️ **Interactive Task Entry** – Users are guided through prompts to enter details for two tasks  
+- 🔍 **Real-Time Validation** – Ensures only valid statuses are accepted  
+- 🔡 **Automatic Formatting** – Converts status inputs to lowercase for consistency  
+- 📝 **Structured Storage** – Stores tasks in well-named variables/arrays for clarity  
+- 🎯 **Console Feedback** – Shows completed tasks clearly or motivational message if none are done  
+- 📖 **Well-Commented Code** – Easy to read, maintain, and extend  
 
-Follow these simple steps to get the project running on your machine:
+---
 
-1. **Clone this repository**
+## 🛠️ Technologies Used  
+
+- **HTML5** – Base structure for linking JS  
+- **CSS3** – Styling inherited from JSL01 project (optional)  
+- **JavaScript (ES6)** – Core logic for input, validation, and output  
+
+---
+
+## ⚙️ Installation & Setup  
+
+Follow these steps to set up and run the project:
+
+1. **Clone the repository**  
    ```bash
-   git clone https://github.com/BrooklynTreasurer/BROTRE25500_pto2505_GroupA_Brooklyn-Treasurer_JSL01-2025.git
+   git clone https://github.com/BrooklynTreasurer/BROTRE25500_pto2505_GroupA_Brooklyn-Treasurer_JSL02-2025.git
 
 
+2. **Navigate into the project folder**
+   ```bash
+   cd BROTRE25500_pto2505_GroupA_Brooklyn-Treasurer_JSL02-2025
+
+3. **Open project in Visual Studio Code**
+   ```bash
+   BROTRE25500_pto2505_GroupA_Brooklyn-Treasurer_JSL02-2025>code .
