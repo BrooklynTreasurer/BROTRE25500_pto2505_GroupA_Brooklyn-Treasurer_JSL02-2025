@@ -1,0 +1,1 @@
+let task1Title = prompt("Enter the title for Task 1:");
