@@ -37,3 +37,8 @@ if (task1Status === "done") {
 if (task2Status === "done") {
     console.log(`Task 2 "${task2Title}" is completed.`);
 }
+
+//If neither task is done
+if (task1Status !== "done" && task2Status !== "done") {
+    console.log("No tasks are completed.LET'S GET TO WORK!");
+}
