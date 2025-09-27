@@ -24,3 +24,6 @@ while(
     task2Status !== "doing" &&
     task2Status !== "done"
 ){
+    alert("Invalid status. Please enter 'ToDo', 'Doing', or 'Done'.");
+    task2Status = prompt("Enter the status for Task 2 (ToDo, Doing, Done):").toLowerCase();
+}
