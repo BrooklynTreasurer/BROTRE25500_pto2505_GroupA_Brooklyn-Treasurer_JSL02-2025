@@ -14,3 +14,4 @@ while(
 }
 
 //Task 2
+let task2Title = prompt("Enter the title for Task 2:");
