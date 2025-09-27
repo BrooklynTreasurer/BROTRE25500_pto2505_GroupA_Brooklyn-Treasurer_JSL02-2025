@@ -30,12 +30,12 @@ while(
 
 //Check if task1 is Done
 if (task1Status === "done") {
-    console.log("Title:", ${task1Title} , "status:", ${task1Status});
+    console.log("Title:", task1Title , "status:", task1Status);
 }
 
 //Check if task2 is Done
 if (task2Status === "done") {
-    console.log("Title:", ${task2Title} , "status:", ${task2Status});
+    console.log("Title:", task2Title , "status:", task2Status);
 }
 
 //If neither task is done
