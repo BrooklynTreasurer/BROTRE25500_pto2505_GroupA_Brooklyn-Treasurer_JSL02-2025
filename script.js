@@ -34,3 +34,6 @@ if (task1Status === "done") {
 }
 
 //Check if task2 is Done
+if (task2Status === "done") {
+    console.log(`Task 2 "${task2Title}" is completed.`);
+}
