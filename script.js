@@ -27,3 +27,10 @@ while(
     alert("Invalid status. Please enter 'ToDo', 'Doing', or 'Done'.");
     task2Status = prompt("Enter the status for Task 2 (ToDo, Doing, Done):").toLowerCase();
 }
+
+//Check if task1 is Done
+if (task1Status === "done") {
+    console.log(`Task 1 "${task1Title}" is completed.`);
+}
+
+//Check if task2 is Done
