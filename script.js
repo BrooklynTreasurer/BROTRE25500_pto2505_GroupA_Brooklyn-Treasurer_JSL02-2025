@@ -16,3 +16,11 @@ while(
 //Task 2
 let task2Title = prompt("Enter the title for Task 2:");
 let task2Desccription = prompt("Enter the description for Task 2:");
+
+//Task 2 Status
+let task2Status = prompt("Enter the status for Task 2 (ToDo, Doing, Done):") .toLowerCase();
+while(
+    task2Status !== "todo" &&
+    task2Status !== "doing" &&
+    task2Status !== "done"
+){
